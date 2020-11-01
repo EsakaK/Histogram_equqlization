@@ -1,4 +1,5 @@
-# Histogram equalization(直方图均衡化)
+# Histogram equalization
+直方图均衡化的python实现（结果展示）
 ## 应用背景
 - 许多图片对比度不够，导致视觉效果不佳（不够清晰、难以分辨不同部分）。   
 - 人类视觉系统都难以分辨的图片，再要求计算机去识别过于苛刻
