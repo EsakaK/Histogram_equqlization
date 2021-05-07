@@ -9,6 +9,7 @@ class HistogramEqualization(object):
         self.OriginalImg = cv2.imread(img_file)
         self.Histogram = np.zeros((1, 256), dtype=np.int)
         self.NewHistogram = np.zeros((1, 256), dtype=np.int)
+        self.Cumulative_distribution = np.zeros((1, 256), dtype=np.float)
         matplotlib.rcParams['font.sans-serif'] = ['SimHei']
         matplotlib.rcParams['axes.unicode_minus'] = False
 
@@ -53,14 +54,13 @@ class HistogramEqualization(object):
         height = self.OriginalImg.shape[0]
         width = self.OriginalImg.shape[1]
         N = height * width  # 所有像素点个数
-        Cumulative_distribution = np.zeros((1, 256), dtype=np.float)
         for i in range(256):
             if i == 0:
-                Cumulative_distribution[0][i] = self.Histogram[0][i] / N
+                self.Cumulative_distribution[0][i] = self.Histogram[0][i] / N
             elif i == 255:
-                Cumulative_distribution[0][i] = 1.0
+                self.Cumulative_distribution[0][i] = 1.0
             else:
-                Cumulative_distribution[0][i] = self.Histogram[0][i] / N + \
+                self.Cumulative_distribution[0][i] = self.Histogram[0][i] / N + \
                                                 Cumulative_distribution[0][i - 1]
         # 绘制图像
         x = list(range(256))
@@ -68,7 +68,7 @@ class HistogramEqualization(object):
         plt.xlabel('灰度值')
         plt.ylabel('概率')
         plt.title('累积分布函数图像')
-        plt.plot(x, Cumulative_distribution[0, :], color='green', linewidth=0.5)
+        plt.plot(x, self.Cumulative_distribution[0, :], color='green', linewidth=0.5)
         plt.savefig('./result/cdf.jpg')
 
     def Histogram_equalizing(self):
