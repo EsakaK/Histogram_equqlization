@@ -4,7 +4,7 @@
 - 许多图片对比度不够，导致视觉效果不佳（不够清晰、难以分辨不同部分）。   
 - 人类视觉系统都难以分辨的图片，再要求计算机去识别过于苛刻
 <img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/Test.jpg" align="left" alt="test1" title="GitHub,Social Coding" width="200" height="200" />
-<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Test(2).jpg" align="mid" alt="test2" title="GitHub,Social Coding" width="200" height="200" />
+<img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/Test(2).jpg" align="mid" alt="test2" title="GitHub,Social Coding" width="200" height="200" />
 
 之所以会出现“看不清，难以分辨……”这些问题，和图片的很多属性有关。   
 比如说分辨率、锐度、对比度等等。而对比度对图像视觉效果影响极为关键。   
@@ -24,8 +24,8 @@
 图像 x 中单个像素点出现灰度 I 的概率为：   
         <img src="http://chart.googleapis.com/chart?cht=tx&chl= p_x(i)=\frac{n_i}{n}" style="border:none;">   
 这其实是将0~255的灰度归一化到[0,1]。   
-<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Test(1).jpg" align="left" alt="test1" title="GitHub,Social Coding" width="200" height="200" />
-<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Histogram(1).jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />    
+<img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/Test.jpg" align="left" alt="test1" title="GitHub,Social Coding" width="200" height="200" />
+<img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/origin_histogram.jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />    
 (左边为原始图片，右边为它的直方图)
 
 ### 3. 均衡化(Equalization)   
@@ -35,7 +35,7 @@
 累计分布函数的计算如下：   
 <img src="http://chart.googleapis.com/chart?cht=tx&chl= c(I)=\frac{1}{N}\sum_{i=0}^{I}h(i)=c(I-1)+\frac{1}{N}h(I)" style="border:none;">    
 得到的分布函数图：   
-<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Cumulative_distribution(1).jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />    
+<img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/origin_cdf.jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />    
 
 
 ### 4. 局部补偿(Partial compensation)   
