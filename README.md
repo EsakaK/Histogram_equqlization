@@ -57,17 +57,17 @@ class Histogram_equalization(object):
 <br/>
 
 ## 实验结果
-<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/result/NewTest(1).jpg"  align ="left" alt="test2" title="GitHub,Social Coding" width="200" height="200" />
+<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/NewTest(1).jpg"  align ="left" alt="test2" title="GitHub,Social Coding" width="200" height="200" />
 <img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Test.jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
    
-<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/result/NewTest(2).jpg"  align ="left"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
+<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pict/NewTest(2).jpg"  align ="left"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
 <img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Test(2).jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
    
-<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/result/NewTest(3).jpg"  align ="left"  alt="test2" title="GitHub,Social Coding" width="200" height="200" /> 
+<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/NewTest(3).jpg"  align ="left"  alt="test2" title="GitHub,Social Coding" width="200" height="200" /> 
 <img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Test(3).jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" /> 
    
-<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/result/NewTest(4).jpg"  align ="left"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
+<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/NewTest(4).jpg"  align ="left"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
 <img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Test(4).jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
    
-<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/result/NewTest(5).jpg"  align ="left"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
+<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/NewTest(5).jpg"  align ="left"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
 <img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Test(5).jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
