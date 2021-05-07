@@ -3,7 +3,7 @@
 ## 应用背景
 - 许多图片对比度不够，导致视觉效果不佳（不够清晰、难以分辨不同部分）。   
 - 人类视觉系统都难以分辨的图片，再要求计算机去识别过于苛刻
-<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Test(1).jpg" align="left" alt="test1" title="GitHub,Social Coding" width="200" height="200" />
+<img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/Test.jpg" align="left" alt="test1" title="GitHub,Social Coding" width="200" height="200" />
 <img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Test(2).jpg" align="mid" alt="test2" title="GitHub,Social Coding" width="200" height="200" />
 
 之所以会出现“看不清，难以分辨……”这些问题，和图片的很多属性有关。   
