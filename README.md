@@ -24,7 +24,7 @@
 图像 x 中单个像素点出现灰度 I 的概率为：   
         <img src="http://chart.googleapis.com/chart?cht=tx&chl= p_x(i)=\frac{n_i}{n}" style="border:none;">   
 这其实是将0~255的灰度归一化到[0,1]。   
-<img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/Test.jpg" align="left" alt="test1" title="GitHub,Social Coding" width="200" height="200" />
+<img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/origin_img.jpg" align="left" alt="test1" title="GitHub,Social Coding" width="200" height="200" />
 <img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/origin_histogram.jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />    
 (左边为原始图片，右边为它的直方图)
 
