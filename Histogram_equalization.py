@@ -109,13 +109,12 @@ class HistogramEqualization(object):
                 I = self.NewImg[row][col]
                 self.NewHistogram[0][I] += 1
         # 绘制直方图
-        x = np.asarray(self.NewHistogram)
-        x.resize((height * width))
+        self.NewImg.resize((height*width))
         plt.figure()
-        plt.hist(x, bins=256, color='green')
+        plt.hist(self.NewImg, bins=256, color='green')
         plt.xlabel('灰度值')
         plt.ylabel('频数')
         plt.title('强化后图片直方图')
         plt.savefig('./result/new_histogram.jpg')
-        x.resize((height, width))
+        self.NewImg.resize((height, width))
 
