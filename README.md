@@ -35,7 +35,7 @@
 累计分布函数的计算如下：   
 <img src="http://chart.googleapis.com/chart?cht=tx&chl= c(I)=\frac{1}{N}\sum_{i=0}^{I}h(i)=c(I-1)+\frac{1}{N}h(I)" style="border:none;">    
 得到的分布函数图：   
-<img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/origin_cdf.jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />    
+<img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/cdf.jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />    
 
 
 ### 4. 局部补偿(Partial compensation)   
