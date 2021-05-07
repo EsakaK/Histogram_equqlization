@@ -42,6 +42,7 @@ class HistogramEqualization(object):
         plt.ylabel('频数')
         plt.title('原始图片直方图')
         plt.savefig('./result/origin_histogram.jpg')
+        x.resize((height, width))
 
     def draw_cd_f(self):
         """
@@ -59,15 +60,15 @@ class HistogramEqualization(object):
             elif i == 255:
                 Cumulative_distribution[0][i] = 1.0
             else:
-                Cumulative_distribution[0][i] = self.Histogram[i] / N + \
-                                                Cumulative_distribution[i - 1]
+                Cumulative_distribution[0][i] = self.Histogram[0][i] / N + \
+                                                Cumulative_distribution[0][i - 1]
         # 绘制图像
         x = list(range(256))
         plt.xlim(0, 255)
         plt.xlabel('灰度值')
         plt.ylabel('概率')
         plt.title('累积分布函数图像')
-        plt.plot(x, Cumulative_distribution[:, 0], color='green', linewidth=0.5)
+        plt.plot(x, Cumulative_distribution[0, :], color='green', linewidth=0.5)
         plt.savefig('./result/cdf.jpg')
 
     def Histogram_equalizing(self):
