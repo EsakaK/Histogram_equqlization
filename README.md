@@ -57,7 +57,7 @@ class Histogram_equalization(object):
 <br/>
 
 ## 实验结果
-<img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/NewTest(1).jpg"  align ="left" alt="test2" title="GitHub,Social Coding" width="200" height="200" />
+<img src="https://github.com/EsakaKyo/Histogram_equqlization/blob/master/pic/NewTest(1).jpg"  align ="left" alt="test2" title="GitHub,Social Coding" width="200" height="200" />
 <img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pic/Test.jpg"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
    
 <img src="https://github.com/EsakaKyo/Histogram_equlization/blob/master/pict/NewTest(2).jpg"  align ="left"  alt="test2" title="GitHub,Social Coding" width="200" height="200" />
