@@ -74,7 +74,7 @@ class HistogramEqualization(object):
         plt.plot(x, self.Cumulative_distribution[0, :], color='green', linewidth=0.5)
         plt.savefig('./result/cdf.jpg')
 
-    def equalization(self):
+    def equalization(self,filename='./result/new_img.jpg'):
         """
         利用计算得到的累积分布函数对原始图像像素进行均衡化，得到映射函数
         :return: None
@@ -97,7 +97,7 @@ class HistogramEqualization(object):
             for col in range(width):
                 Newvalue = f[0][self.NewImg[row][col]]
                 self.NewImg[row][col] = Newvalue
-        cv2.imwrite('./result/new_img.jpg', self.NewImg)
+        cv2.imwrite(filename, self.NewImg)
 
     def draw_new_histogram(self,filename='./result/new_histogram.jpg'):
         """绘制新图片的直方图"""
