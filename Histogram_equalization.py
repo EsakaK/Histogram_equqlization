@@ -38,6 +38,7 @@ class HistogramEqualization(object):
         # 绘制直方图
         x = np.asarray(self.OriginalImg)
         x.resize((height * width))
+        plt.figure()
         plt.hist(x, bins=256, color='green')
         plt.xlabel('灰度值')
         plt.ylabel('频数')
@@ -61,15 +62,46 @@ class HistogramEqualization(object):
                 self.Cumulative_distribution[0][i] = 1.0
             else:
                 self.Cumulative_distribution[0][i] = self.Histogram[0][i] / N + \
-                                                Cumulative_distribution[0][i - 1]
+                                                     self.Cumulative_distribution[0][i - 1]
         # 绘制图像
         x = list(range(256))
+        plt.figure()
         plt.xlim(0, 255)
+        plt.ylim(0, 1)
         plt.xlabel('灰度值')
         plt.ylabel('概率')
         plt.title('累积分布函数图像')
         plt.plot(x, self.Cumulative_distribution[0, :], color='green', linewidth=0.5)
         plt.savefig('./result/cdf.jpg')
+
+    def equalization(self):
+        """
+        利用计算得到的累积分布函数对原始图像像素进行均衡化，得到映射函数
+        :return: None
+        """
+        # 累积分布函数计算完成后，进行I和c的缩放，把值域缩放到0~255的范围之内
+        self.Cumulative_distribution = self.Cumulative_distribution * 255
+        height = self.OriginalImg.shape[0]
+        width = self.OriginalImg.shape[1]
+        # 对均衡后的图像进行平滑处理,使用线性混合
+        f = np.zeros((1, 256), dtype=np.int)  # 映射函数
+        alpha = 1  # 混合参数
+        for i in range(256):
+            f[0][i] = alpha * self.Cumulative_distribution[0][i] + (1 - alpha) * i
+        self.f = f.astype(np.int)
+
+        # f为得到的映射，据此生成新的图像
+        self.NewImg = np.zeros((self.OriginalImg.shape))
+        self.NewImg = self.OriginalImg.copy()
+        for row in range(height):
+            for col in range(width):
+                Newvalue = f[0][self.NewImg[row][col]]
+                self.NewImg[row][col] = Newvalue
+        cv2.imwrite('./result/new_img.jpg', self.NewImg)
+
+    def draw_new_histogram(self):
+        """绘制新图片的直方图"""
+
 
     def Histogram_equalizing(self):
         # 1.计算像素点，得到直方图
