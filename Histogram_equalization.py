@@ -99,7 +99,7 @@ class HistogramEqualization(object):
                 self.NewImg[row][col] = Newvalue
         cv2.imwrite('./result/new_img.jpg', self.NewImg)
 
-    def draw_new_histogram(self):
+    def draw_new_histogram(self,filename='./result/new_histogram.jpg'):
         """绘制新图片的直方图"""
         # 计算像素点，得到原始图片直方图
         height = self.OriginalImg.shape[0]
@@ -115,6 +115,6 @@ class HistogramEqualization(object):
         plt.xlabel('灰度值')
         plt.ylabel('频数')
         plt.title('强化后图片直方图')
-        plt.savefig('./result/new_histogram.jpg')
+        plt.savefig(filename)
         self.NewImg.resize((height, width))
 
