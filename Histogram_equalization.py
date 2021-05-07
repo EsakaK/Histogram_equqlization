@@ -36,7 +36,7 @@ class HistogramEqualization(object):
                 self.Histogram[0][I] += 1
         # 绘制直方图
         x = np.asarray(self.OriginalImg)
-        x.resize((height*width))
+        x.resize((height * width))
         plt.hist(x, bins=256, color='green')
         plt.xlabel('灰度值')
         plt.ylabel('频数')
@@ -48,7 +48,27 @@ class HistogramEqualization(object):
         累加直方图，得到累计分布函数，并绘制图像
         :return: None
         """
-        
+        # 使用c(I)的计算公式
+        height = self.OriginalImg.shape[0]
+        width = self.OriginalImg.shape[1]
+        N = height * width  # 所有像素点个数
+        Cumulative_distribution = np.zeros((1, 256), dtype=np.float)
+        for i in range(256):
+            if i == 0:
+                Cumulative_distribution[0][i] = self.Histogram[0][i] / N
+            elif i == 255:
+                Cumulative_distribution[0][i] = 1.0
+            else:
+                Cumulative_distribution[0][i] = self.Histogram[i] / N + \
+                                                Cumulative_distribution[i - 1]
+        # 绘制图像
+        x = list(range(256))
+        plt.xlim(0, 255)
+        plt.xlabel('灰度值')
+        plt.ylabel('概率')
+        plt.title('累积分布函数图像')
+        plt.plot(x, Cumulative_distribution[:, 0], color='green', linewidth=0.5)
+        plt.savefig('./result/cdf.jpg')
 
     def Histogram_equalizing(self):
         # 1.计算像素点，得到直方图
