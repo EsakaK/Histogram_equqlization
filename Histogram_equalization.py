@@ -71,7 +71,7 @@ class HistogramEqualization(object):
         plt.xlabel('灰度值')
         plt.ylabel('概率')
         plt.title('累积分布函数图像')
-        plt.plot(x, self.Cumulative_distribution[0, :], color='green', linewidth=0.5)
+        plt.plot(x, self.Cumulative_distribution[0, :]*255, color='green', linewidth=0.5)
         plt.savefig('./result/cdf.jpg')
 
     def equalization(self,filename='./result/new_img.jpg'):
